@@ -1,6 +1,6 @@
 <div>
     Name:
-    <input type="text" [formControl]="name" required>
+    <input type="text" [formControl]="name" required noBlankSpace >
     <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
         <div *ngIf="name.errors.required">
             Name is required.
@@ -8,5 +8,5 @@
     </div>
 </div>
 <div>
-{{name.value.trim().length}}
+{{name.errors}}
 </div>

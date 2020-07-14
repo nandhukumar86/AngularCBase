@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SimpleComponent } from './simple/simple.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NoBlankSpaceDirective } from './no-blank-space.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleComponent
+    SimpleComponent,
+    NoBlankSpaceDirective
   ],
   imports: [
     BrowserModule,
