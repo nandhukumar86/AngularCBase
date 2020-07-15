@@ -14,7 +14,7 @@ export class NoBlankSpaceDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors | null {
     if (control.value && control.value.trim().length < 1) {
       return {
-        noBlankSpace: false
+        blankSpace: true
       };
     }
     return null;

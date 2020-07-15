@@ -10,15 +10,11 @@ export class SimpleComponent implements OnInit {
 
   constructor() { }
 
-  fullName = new FormControl('')
-
   name = new FormControl('')
-  age: any
+  age: any = 0
 
   ngOnInit() {
     this.age = 33
-
-   
 
   }
 

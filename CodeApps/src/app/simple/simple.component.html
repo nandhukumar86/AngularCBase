@@ -2,11 +2,17 @@
     Name:
     <input type="text" [formControl]="name" required noBlankSpace >
     <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-        <div *ngIf="name.errors.required">
+        <div *ngIf="name.errors.required || name.errors.blankSpace">
             Name is required.
         </div>
     </div>
 </div>
-<div>
-{{name.errors}}
+
+<div>Age: <input [(ngModel)]="age" #age1="ngModel" #age2="ngModel" required noBlankSpace>
+    <div *ngIf="age1.invalid && (age1.dirty || age1.touched)" class="alert alert-danger">
+        <div *ngIf="age1.errors.required || age1.errors.blankSpace">
+            Age is required.
+        </div>
+    </div>
 </div>
+
